@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Git Search</title>
+    <link rel="stylesheet" type="text/css" href="css\stylesheet.min.css" />
+    <script src="scripts/d3.js"></script>
+    <script src="scripts/angular.min.js"></script>
+    <script src="js\searchController.min.js"></script>
+</head>
+
+<body ng-app="searchModule">
+    <div ng-controller="searchController" id='searchApp'>
+        <div id='search'>
+            <input type='text' ng-model='searchValue'  ng-keypress='enterPressed($event)'></input>
+            <button ng-click='sendSearch($event)'>Github Search</button>
+        </div>
+        <div id='results'>
+            <div id='container'>
+                <div>
+                    <div ng-repeat='result in searchData'>
+                        <button ng-click='expandAccordion($event)' class='accordion'>{{ result.full_name}}</button>
+                        <div class='panel'>
+                            <p>
+                                {{ outputResults(result)}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

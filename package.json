@@ -1,0 +1,33 @@
+{
+  "name": "Git-search",
+  "version": "0.0.1",
+  "description": "Github Search Tool",
+  "engines": {
+    "node": "5.9.1"
+  },
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "lint": "echo '=> linting' && jshint controllers/searchController.js",
+    "minify:js": "echo '=> minify:js' && uglifyjs controllers/searchController.js -o dist/js/searchController.min.js",
+    "minify:css": "echo '=> minify:css' && cleancss styles/stylesheet.css -o dist/css/stylesheet.min.css"
+  },
+  "dependencies": {
+    "express": "4.13.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/neilshah2000/git_search"
+  },
+  "keywords": [
+    "node",
+    "search",
+    "git"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "clean-css": "^3.4.19",
+    "jshint": "^2.9.2",
+    "uglify-js": "^2.7.0"
+  }
+}
