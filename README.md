@@ -1,6 +1,6 @@
 # searchGit
 
-npm insall
+npm install
 
 npm start
 
